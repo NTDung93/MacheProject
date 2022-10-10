@@ -1,1 +1,31 @@
-
+.part1 {
+  .top-half {
+    .bg-part1 {
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      .nav-menu {
+        display: flex;
+        width: 1000px;
+        // justify-content: center;
+        justify-content: space-between;
+        .left-menu {
+          span {
+            color: red;
+            padding-right: 2px;
+            font-weight: 900;
+          }
+        }
+        .right-menu {
+          width: 380px;
+          ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+          }
+        }
+      }
+    }
+  }
+}
