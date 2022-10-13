@@ -134,11 +134,17 @@
 .ShowMore {
   margin-top: 50px;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: 1s;
   p {
     text-align: center;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #ed145b;
+    letter-spacing: 1px;
+  }
+  .icon {
+    display: block;
   }
 }
 // ------------------------ Overplay-----------------
