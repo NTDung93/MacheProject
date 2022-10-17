@@ -1,4 +1,9 @@
 .part1 {
+  .list-actived {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.8 linear;
+  }
   .top-half {
     // background-image: url("https://scontent.xx.fbcdn.net/v/t1.15752-9/309921484_519097742882823_3173758315703348685_n.png?_nc_cat=100&ccb=1-7&_nc_sid=aee45a&_nc_ohc=eczrCKHBre0AX-iNP84&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVLYAGXchTJJlOmbq2sQor-xuNBUKsQ50xG1u38AjFQjBw&oe=636B7BFE");
     display: block;
@@ -33,7 +38,7 @@
           width: 420px;
           ul {
             color: white;
-            margin-top: 5px;
+            margin-top: 0.5px;
             font-size: 15px;
             list-style: none;
             display: flex;
@@ -45,6 +50,12 @@
               transition: 0.8s;
             }
           }
+        }
+        .bar-btn {
+          i {
+            color: white;
+          }
+          display: none;
         }
       }
     }
@@ -372,7 +383,7 @@
       .content {
         width: 840px;
       }
-      height: 626px;
+      // height: 626px;
     }
     .bottom-half {
       width: 100%;
@@ -451,6 +462,7 @@
         top: 20%;
         left: 0%;
       }
+      height: 626px;
     }
   }
 }
@@ -525,7 +537,50 @@
 }
 @media only screen and(max-width: 680px) {
   .part1 {
+    .list-actived {
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.8 linear;
+    }
     .top-half {
+      .menu {
+        .nav-menu {
+          justify-content: space-between !important;
+          padding: 0 65px;
+          .left-menu {
+            .mache {
+              font-size: 25px;
+              margin-top: 5.5px;
+            }
+            span {
+              font-size: 16.2px;
+              margin-top: 12.2px;
+            }
+          }
+          .right-menu {
+            // display: none;
+            ul {
+              // position: fixed;
+              width: 100%;
+              height: 18vh;
+              background: #2f3640;
+              top: 80px;
+              left: 0;
+              text-align: center;
+              display: block;
+              li {
+                display: block;
+              }
+            }
+          }
+          .bar-btn {
+            display: block;
+            i {
+              font-size: 30px;
+            }
+          }
+        }
+      }
       .content {
         width: 662px;
         transform: scale(0.8) !important;
@@ -608,8 +663,21 @@
     }
   }
 }
-@media only screen and(max-width: 510px) {
+@media only screen and(max-width: 509px) {
   .part1 {
     width: 98%;
+  }
+}
+
+//responsive navigation bar
+@media only screen and(max-width: 1140px) {
+  .part1 {
+    .top-half {
+      .menu {
+        .nav-menu {
+          justify-content: space-around;
+        }
+      }
+    }
   }
 }
