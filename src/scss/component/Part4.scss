@@ -1,0 +1,184 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css);
+.header_top {
+  background-color: #ed145b;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2.2px;
+  &_title {
+    font-size: 3rem;
+    color: white;
+    font-weight: 200;
+    span {
+      font-weight: 800;
+    }
+  }
+  &_butn {
+    padding: 1.2rem;
+    border-radius: 4rem;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    color: #ed145b;
+    font-size: 1.2rem;
+    margin-left: 35px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    transition: 1s;
+    letter-spacing: 1px;
+    cursor: pointer;
+    &:hover {
+      background-color: #ed145b;
+      color: white;
+      border: 1px white solid;
+    }
+  }
+}
+
+//------------------------------------------------------------------ BODY---------------------------------
+.intension {
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  &_title {
+    p {
+      text-align: center;
+    }
+    &_top {
+      text-align: center;
+      font-size: 2.6rem;
+      font-style: italic;
+      position: relative;
+      font-weight: 250;
+      &::after {
+        content: "";
+        width: 198px;
+        color: red;
+        position: absolute;
+        height: 1px;
+        background: #ed145b;
+        margin-top: 4px;
+        top: 125%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &_bot {
+      margin-top: 40px;
+    }
+  }
+}
+// --------------------------- img ---------------------------------
+.wrapAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.ticket_card {
+  padding: 0 20px;
+  width: 33.33%;
+  margin-top: 30px;
+  transition: 1s;
+  &:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(8px 8px 10px gray);
+  }
+  .overplay {
+    position: absolute;
+    background-color: red;
+    z-index: 2;
+    bottom: -9px;
+    width: 259px;
+    height: 182px;
+    opacity: 0.5;
+    &:hover {
+      top: 200px;
+    }
+  }
+  img {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: -1;
+    &:hover {
+      filter: sepia(100%);
+    }
+  }
+  p {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    font-weight: 550;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+  h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 9px;
+    opacity: 0.6;
+  }
+  &_content {
+    padding: 10px;
+    background-color: #f4f4f4;
+  }
+}
+//-------------------------------------ShowMORE--------------------
+.ShowMore {
+  margin-top: 50px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 1s;
+  p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ed145b;
+    letter-spacing: 1px;
+  }
+  .icon {
+    display: block;
+  }
+}
+// ------------------------ Overplay-----------------
+
+// --------------------------------- Responsive----------------------------------
+
+@media only screen and (max-width: 1002px) {
+  .header_top {
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    &_title {
+      font-size: 2rem;
+      text-align: center;
+    }
+    &_butn {
+      width: 120px;
+      margin-left: 30px;
+      // margin-top: -45px;
+    }
+  }
+}
+
+@media only screen and (max-width: 688px) {
+  .header_top_title {
+    margin-top: 12px;
+  }
+  .header_top_butn {
+    margin-top: -45px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 588px) {
+  .ticket_card {
+    width: 60%;
+  }
+}
